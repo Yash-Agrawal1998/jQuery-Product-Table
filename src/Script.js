@@ -12,7 +12,14 @@ $(document).ready(function ()
     var productName = $("#productName").val();
     var productPrice = $("#productPrice").val();
     var productQuantity = $("#productQuantity").val();
+
     storeData(productSKU, productName, productPrice, productQuantity);
+
+    //Clearing the previous value from the input tags
+    productSKU = $("#productSKU").val("");
+    productName = $("#productName").val("");
+    productPrice = $("#productPrice").val("");
+    productQuantity = $("#productQuantity").val("");
 
     //Code to perform the edit operation
     $("#tableData").on("click", ".edit", function () 
@@ -134,6 +141,12 @@ function editData(id)
 
         alert("Element updated with id:"+dataObject[i].Id);
         $("#success").html("Data Updated Successfully");
+
+        //Clearing the previous value from the input tags
+        $("#productSKU").val("");
+        productName = $("#productName").val("");
+        productPrice = $("#productPrice").val("");
+        productQuantity = $("#productQuantity").val("");
 
         display(dataObject);
       });
