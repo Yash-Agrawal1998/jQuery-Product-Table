@@ -1,0 +1,62 @@
+<!--
+    Task: To create a Product table
+    Date:08/02/2022
+    Author:Yash Agrawal
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Style.css" rel="stylesheet">
+    <title>Product Table</title>
+</head>
+<body>
+    <div id="main">
+        <table>
+          <tr>
+            <td>Product SKU</td>
+            <td><input type="text" id="productSKU"/><span id="perrorMsg"></span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Product Name</td>
+            <td><input type="text" id="productName"/><span id="nameErrorMsg"></span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Product Price</td>
+            <td><input type="text" id="productPrice"/><span id="priceErrorMsg"></span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Product Quantity</td>
+            <td><input type="text" id="productQuantity"/><span id="quantityErrorMsg"></span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="button" value="Add Product" id="addProduct"/>
+              <input type="button" value="Update" id="updateProduct"/>
+            </td>
+          </tr>
+        </table>
+
+        <p id="success">Product Added Successfully</p>
+        <p id="error">There is some problem</p>
+          <table id="tableData">
+            <tr>
+                <th>SKU</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+        </table>
+        </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="Script.js"></script>
+</body>
+</html>
